@@ -4,10 +4,11 @@
   align-items: center;
   position:sticky;
   top: 0 ;
-  padding: 10px 0px 10px 0px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.351);
+  padding: 5px 0px 4px 0px;
+  border-bottom: 1px solid rgba(136, 131, 131, 0.338);
   background-color: white;
   z-index: 1;
+  height: 50px;
 }
 
 .left-section{
@@ -19,8 +20,7 @@
 }
 
 .left-section img{
-  width: 140px;
-  height: px;
+  width: 83px;
   object-fit: cover;
 }
 
@@ -34,63 +34,38 @@
 }
 
 .middle-section{
-  width: 20px;
+  width: 0px;
   flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
   border-radius: 5px;
-  margin-right: 30px;
+  margin-right: 20px;
   margin-left: 30px;
-}
-
-@media (max-width:650px) {
-  .header{
-    height: 50px;
-  }
-  .middle-section{
-    display: none;
-  }
+  position: relative;
 }
 
 .middle-section input{
-  flex: 1;
-  padding: 15px 0px 15px 10px;
-  border: 2px solid rgba(0, 0, 0, 0.325);
+  width: 600px;
+  min-width: 100px;
+  padding: 15px 14px 8px 20px;
+  border: 1px solid rgba(149, 149, 149, 0.325);
   border-right: none;
-  border-radius: 2px;
-  box-shadow: inset 1px 2px 3px rgba(128, 128, 128, 0.15);
+  border-radius: 50px;
+  box-shadow: inset 1px -1px 3px rgba(128, 128, 128, 0.066);
   outline: none;
-  width: 0;
 }
 
 .middle-section input::placeholder{
   font-size: 18px;
 }
 
-.middle-section label{
-  border: 2px solid rgba(0, 0, 0, 0.266);
-  width: 70px;
-  height: 46px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 21px;
-  background-color: rgba(0, 0, 0, 0.052);
-  color: rgba(0, 0, 0, 0.659);
-  border-radius: 2px;
-  margin-left: -2px;
-}
-
-.middle-section label:hover{
-  background-color: rgba(128, 128, 128, 0.279);
-}
-
 .right-section{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 200px;
-  flex-shrink: 0;
+  width: 230px;
+  flex-shrink: 1;
   padding-right: 10px;
 }
 
@@ -100,9 +75,15 @@
 }
 
 .right-section i{
-  font-size: 18px;
   position: relative;
   font-size: 20px;
+  padding: 15px;
+  transition: .2s ease-in-out;
+  border-radius: 50%;
+}
+
+.right-section i:hover{
+  background-color: rgba(128, 128, 128, 0.111);
 }
 
 .micro{
@@ -140,8 +121,8 @@
 .right-section #bell::after{
   content: "3";
   position: absolute;
-  top: -9px;
-  right: -10px;
+  top: 5px;
+  right:5px;
   padding: 4px 7px;
   border-radius: 50%;
   background-color: rgb(197, 7, 7);
@@ -150,3 +131,22 @@
   font-family: sans-serif;
   font-weight: 1;
 } 
+
+@media (max-width:650px) {
+  .header{
+    height: 50px;
+  }
+  .left-section{
+    padding-left: 0;
+    justify-content: flex-start;
+  }
+  .left-section i{
+    margin: 0px 10px;
+  }
+  .right-section{
+    width: 175px;
+  }
+  .middle-section{
+    display: none;
+  }
+}
