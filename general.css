@@ -1,15 +1,15 @@
 body{
-  background-color: rgba(0, 0, 0, 0.077);
+  background-color: rgba(190, 188, 188, 0.285);
   padding: 0;
   margin: 0;
 }
 
 .parent{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr ;
   gap: 20px ;
   padding: 10px;
-  margin-left: 90px;
+  margin-left: 210px;
   margin-top: 15px;
 }
 
@@ -17,7 +17,8 @@ body{
   width: 100%;
   height: 200px;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
+  border-radius: 10px;
 }
 
 .thumbnail{
@@ -93,11 +94,55 @@ p{
 .content .picture{
   border-radius: 50px;
   width: 40px;
+  height: 40px;
+  object-fit: cover;
 }
 
-@media (max-width:1000px){
+.sidebar{
+  position: fixed;
+  top: 59px;
+  bottom: 0;
+  width: 190px;
+  height: 100%;
+  background-color: white;
+  padding-top: 15px;
+  z-index: 1;
+}
+
+.sidebar .sidebar-link{
+  height: 45px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin: 5px 5px 25px 5px;
+}
+
+.sidebar-link i{
+  font-size: 21px;
+  margin-bottom: 7px;
+  margin: 20px;
+}
+
+.sidebar-link-name{
+  font-size: 15px;
+  margin-top: 17px;
+}
+
+.sidebar-link:hover{
+  background-color: rgba(128, 128, 128, 0.426);
+}
+
+
+@media (max-width:1442px){
   .parent{
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width:1152px){
+  .parent{
+    grid-template-columns: 1fr 1fr ;
     padding: 10px 20px;
   }
 }
@@ -107,37 +152,10 @@ p{
     grid-template-columns: 1fr ;
     padding: 10px 20px;
   }
+  .parent{
+    margin-left: 0px;
+  }
+  .sidebar{
+    display: none;
+  }
 } 
-
-.sidebar{
-  position: fixed;
-  top: 70px;
-  bottom: 0;
-  width: 90px;
-  height: 600px;
-  background-color: white;
-  padding-top: 15px;
-  z-index: 1;
-}
-
-.sidebar .sidebar-link{
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.sidebar-link i{
-  font-size: 21px;
-  margin-bottom: 7px;
-}
-
-.sidebar-link-name{
-  font-size: 11px;
-}
-
-.sidebar-link:hover{
-  background-color: rgba(128, 128, 128, 0.426);
-}
-
