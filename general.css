@@ -9,7 +9,7 @@ body{
   grid-template-columns: 1fr 1fr 1fr ;
   gap: 20px ;
   padding: 10px;
-  margin-left: 210px;
+  margin-left: 260px;
   margin-top: 15px;
 }
 
@@ -110,7 +110,7 @@ p{
 }
 
 .sidebar .sidebar-link{
-  height: 45px;
+  height: 51px;
   display: flex;
   align-items: center;
   border-radius: 10px;
@@ -143,6 +143,10 @@ p{
   .parent{
     grid-template-columns: 1fr 1fr ;
     padding: 10px 20px;
+    margin-left: 0;
+  }
+  .sidebar{
+    display: none;
   }
 }
 
@@ -150,11 +154,5 @@ p{
   .parent{
     grid-template-columns: 1fr ;
     padding: 10px 20px;
-  }
-  .parent{
-    margin-left: 0px;
-  }
-  .sidebar{
-    display: none;
   }
 } 
